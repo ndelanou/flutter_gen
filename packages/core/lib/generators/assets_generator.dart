@@ -487,9 +487,9 @@ String _directoryClassGenDefinition(
   final statementsBlock = statements
       .map((statement) => statement.needDartDoc
           ? '''${statement.toDartDocString()}
-          ${statement.toGetterString()}
+          ${statement.toStaticFieldString()}
           '''
-          : statement.toGetterString())
+          : statement.toStaticFieldString())
       .join('\n');
   final valuesBlock = _assetValuesDefinition(statements);
 
