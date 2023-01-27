@@ -603,5 +603,5 @@ class _Statement {
   String toGetterString() =>
       '$type get $name => ${isConstConstructor ? 'const' : ''} $value;';
 
-  String toStaticFieldString() => 'static const $type $name = $value;';
+  String toStaticFieldString() => 'final $type $name = const $value;';
 }
